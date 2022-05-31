@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RESTtoRANT</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <link rel="stylesheet" href="st.css">
+    <style type="text/css">
+       #order_box{
+           position: absolute;
+           height: 32rem;
+           width: 32rem;
+           background:  linear-gradient(140deg, #43C6AC, #F8FFAE);
+           left: 48rem;
+           top: 87rem;
+           border-radius: 12px;
+           border: 2px solid black;
+           box-shadow: 2px 2px 2px 2px black;
+           animation-name: order;
+           animation-duration: 0.4s;  
+       }
+       
+
+       
+       @keyframes order{
+           to {top: 87rem;}
+           from{top: 100px;}
+       }
+       
+       #order_box img{
+        position: absolute;
+        left: 29rem;
+        cursor: pointer;
+        transition: 0.5s ease;
+       }
+       #order_box img:hover{
+           background: red;
+           border-radius: 50%;
+       }
+       #order_box  .name{
+           position: relative;
+           display: block;
+           font-weight: bolder;
+           justify-content: right;
+           align-items: center;
+           font-family: 'Courier New', Courier, monospace;
+           top: 5rem;
+           left: 19px;
+           
+       }
+       
+       #order_box #input1{
+           top: 1.7rem;
+           position: relative;
+           display: block;
+           align-items: center;
+           justify-content: center;
+           margin-top: 22px;
+           height: 2rem;
+           left: 10rem;
+           border-radius: 12px;
+           border: 2px solid black;
+           cursor: pointer;
+           width: 20rem;
+           font-family: 'Courier New', Courier, monospace;
+           font-weight: bolder;
+          
+       }
+       #order_box #input1:hover{
+           box-shadow: 2px 2px 2px 2px black;
+       }
+       #order_box #check {
+           position: absolute;
+           padding-left: none;
+           top: 27rem;
+           height: 1.5rem;
+           width: 1.5rem;
+           left: 3rem;
+           border: 2px solid black;
+           cursor: pointer;
+       }
+       #order_box #check:hover{
+           box-shadow: 2px 2px 2px 2px black;
+           
+       }
+       #order_box .name1{
+           font-family: 'Courier New', Courier, monospace;
+           font-weight: bolder;
+           top: 27.5rem;
+           position: absolute;
+           font-size: 13px;
+           left: 5rem;
+       }
+       #order_box #input1 .name1{
+           position: relative;
+           top: 18rem;
+       }
+       #Payment{
+           font-family: 'Courier New', Courier, monospace;
+           position: relative;
+           left: 8rem;
+           top: 2rem;
+       }
+       #Payment:hover{
+           color: white;
+       }
+       #submit{
+           position: absolute;
+           font-family: 'Courier New', Courier, monospace;
+           height: 2rem;
+           width: 6rem;
+           font-weight: bolder;
+           font-size: 1rem;
+           top: 22rem;
+           left: 14rem;
+           cursor: pointer;
+           border-radius: 5px;
+           transition: 0.4s ease;
+           
+       }
+       
+       #submit:hover{
+           background: red;
+           color: white;
+           box-shadow: 2px 5px 2px 2px black;
+       }
+       .end .col .social_media{
+           display: flex;
+           position: absolute;
+           left: 11rem;
+           top: -7rem;
+           padding-left: 32px;
+           padding-right: 32px; 
+       }
+       
+       .text_info{
+            top: -7rem;
+            position: relative;
+            left: -5rem;
+       }
+       .end .col .text_info h2{
+        font-size: 1rem;
+        top: -1rem;
+        left: 0.1rem;
+    }
+       .end .col .text_info h3{
+            font-size: 1rem;
+            position: relative;
+            
+       }
+       
+       .end .col .social_media img{
+        padding-left: 32px;
+        padding-right: 32px;
+        
+       }
+       .end .col .social_media  a{
+           transition: 0.4s ease;
+           
+       }
+       .end .col .social_media  a:hover{
+            
+            height: 2px;
+            padding-top: 1rem;
+       }
+       .end .col h2{
+           font-size: 1rem;
+           top: -4rem;
+           padding-left: -8rem;
+           position: relative;
+           left: -9rem;
+           
+       }
+       .end .col h2 a{
+           text-decoration: none;
+           color: white;
+       }
+       
+       @media  (max-width: 700px)
+       {
+        #order_box{
+            position: absolute;
+            animation-name: order;
+            animation-duration: 0.4s;
+            animation-fill-mode: forwards;
+            left:6rem;
+           z-index: 123;
+            
+        }
+        @keyframes order{
+           to {top: 49rem;}
+           from{top: 100px;}
+       }
+       }
+      
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-bar">
+            <div class="nav-logo">
+                
+                    <h1>REST</h1>
+                    <h3>toSHOP</h3>
+               
+            </div>
+            <a class="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <div class="nav-links">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="index.html">HOME</a>
+                            <a href="order.html">ORDER</a>
+                            <a href="Delivery.html">DELIVERY</a>
+                            <a href="">ABOUT</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>    
+        </div>
+    </header>
+
+    <div class="intro-bg">
+        <div class="bg-text">
+            <img src="resto.jpg">
+            <div class="text">
+                <h1 class="text2">Welcome!</h1>
+                <h3 class="text3">Enjoy the calmness of our place<br> We will promise that you will enjoy it.</h3>
+                <button><a>MESSAGE US</a> </button>
+            </div>   
+        </div>
+    </div>
+    <div class="card">
+        
+        <h1 class="h1">BEST MENU:</h1>
+        <button class="buttonleft" onclick="slides(-1)"> <h1> > </h1> </button>
+        
+        <div class="carousel"  >
+            <img src="halo-halo.png">
+            <h1>Halo-halo</h1>
+            <h2>$ 23</h2>
+            <button id="btn" onclick="orderBtn()"><a>Order</a></button>
+        </div>
+
+        <div class="carousel" >
+            <img src="cappuccino coffee.jpg">
+            <h1>Cappucino</h1>
+            <h2>$ 13</h2>
+            <button id="btn" onclick="orderBtn()"><a>Order</a></button>
+        </div>
+
+        <div class="carousel">
+            <img src="mango milkshake.png">
+            <h1>Mango shake</h1>
+            <h2>$ 10</h2>
+            <button id="btn" onclick="orderBtn()"><a>Order</a></button>
+        </div>
+
+        <div class="carousel">
+            <img src="mango juice.png">
+            <h1>Mango juice</h1>
+            <h2>$ 16</h2>
+            <button id="btn" onclick="orderBtn()"><a>Order</a></button>
+        </div>
+
+        <div class="carousel">
+            <img src="chicken wings.png">
+            <h1>chicken wings</h1>
+            <h2>$ 25</h2>
+            <button id="btn" onclick="orderBtn()"><a>Order</a></button>
+        </div>
+
+        <div class="carousel">
+            <img src="carbonara.jpg">
+            <h1>Carbonara</h1>
+            <h2>$ 22</h2>
+            <button id="btn" onclick="orderBtn()"><a>Order</a></button>
+        </div>
+
+        <div class="carousel">
+            <img src="takoyaki.png">
+            <h1>Takoyaki</h1>
+            <h2>$ 20</h2>
+            <button id="btn" onclick="orderBtn()"><a>Order</a></button>
+        </div>
+
+        <div class="carousel">
+            <img src="regular fries.png">
+            <h1>Regular fries</h1>
+            <h2>$ 10</h2>
+            <button id="btn" onclick="orderBtn()"><a>Order</a></button>
+        </div>
+        <button class="buttonright" onclick="slides(+1)"> <h1> < </h1></button>
+    </div>
+
+
+    <div class="row">
+        <div class="place">
+            <h1>PLACE</h1>
+            <a>Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,<br> when an unknown printer took a galley of type and scrambled it to make a type specimen book. <br>It has survived not only five centuries, but also the leap into electronic typesetting, <br>remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, <br>and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</a>
+        </div>
+        
+        <div class="AWARD">
+            <h1>AWARD</h1>
+            <a>Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,<br> when an unknown printer took a galley of type and scrambled it to make a type specimen book. <br>It has survived not only five centuries, but also the leap into electronic typesetting, <br>remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, <br>and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</a>
+        </div>
+
+        <div class="CERTIFICATE">
+            <h1>CERTIFICATE</h1>
+            <a>Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,<br> when an unknown printer took a galley of type and scrambled it to make a type specimen book. <br>It has survived not only five centuries, but also the leap into electronic typesetting, <br>remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, <br>and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</a>
+        </div>
+        
+        <div class="INFO">
+            <h1>INFO</h1>
+            <a>Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,<br> when an unknown printer took a galley of type and scrambled it to make a type specimen book. <br>It has survived not only five centuries, but also the leap into electronic typesetting, <br>remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, <br>and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</a>
+        </div>
+    </div>
+    
+
+    <div class="end">
+        <div class="col1">
+            <span></span>
+        </div>
+
+        <div class="col">
+            <h1>contact</h1>
+                 
+            <div class="text_info">
+                <h2>Cp number: 091932422211</h2>  
+                <h3>Telephone number: 456-4534</h2>
+            </div>    
+        </div>
+
+        <div class="col">
+            <h2>Social media</h1>
+            <div class="social_media">
+                <a href=""><img src="twitter.png"></a>
+                <a href=""><img src="facebook.png"></a>
+                <a href=""><img src="instagram.png"></a>
+            </div>  
+        </div>
+
+        <div class="col">
+            <h2><a href="">About us</a></h1> 
+        </div>
+
+    </div>
+    <div id="order_box" style="display: none;">
+        <form action="" method="">
+            <img src="close.png" id="closeImg" onclick="closeTag()">
+            <h1 id="Payment">FORM VALIDATION</h1>
+            <label class="name">Name:</label>
+            <input id="input1" required></input>
+            <label class="name" >Phone number:</label>
+            <input id="input1" required></input>
+            <label class="name">Email address:</label>
+            <input id="input1" required></input>
+            <button id="submit" onclick="submitOrder()">Submit</button>
+
+            <input type="checkbox" id="check">
+            <label class="name1">Pleas check this box if your are done in validation</label><br> 
+        </form>
+    </div>
+
+</body>
+<script>
+    const btn = document.querySelector("#btn")
+    const box = document.querySelector("#order_box")
+
+    function orderBtn(){
+        
+        if(box.style.display == "none" && btn.style.display == "block"){
+            
+            btn.style.display = "block";
+            box.style.display = "none";
+            
+            
+        }
+        else{
+            box.style.display = "block";
+            
+        }
+  
+    }
+    
+    const closetag = document.querySelector("#closeImg");
+    const menu = document.querySelector("#order_box");
+    const btn1 = document.querySelector("#btn")
+
+
+    
+    function closeTag(){
+        
+
+        if(menu.style.display == "none"){
+            menu.style.display = "block";
+            
+            
+        }
+        else{
+            menu.style.display = "none";
+            
+        }
+      
+    }
+
+   
+    
+    
+    
+    /*const menu2 = document.querySelector("#order_box");
+    const btn12 = document.querySelector("#btn")
+
+    function orderBtn(){
+        if(btn12.style.display == "none"){
+            btn12.style.display = "block"
+            menu2.style.display = "block"
+        }
+        else{
+            btn12.style.display = "none"
+            menu2.style.display = "none"
+        }
+    }*/
+
+
+    /*const btn = document.querySelector("#btn")
+    const box = document.querySelector("#order_box")
+
+    btn,addEventListener("click", function (){
+        if(box.style.display == "none"){
+            box.style.display = "block";
+        }
+        else{
+            box.style.display = "none";
+        }
+        
+    })*/
+
+    
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function slides (n) {
+    showDivs(slideIndex += n);
+    }
+
+    function showDivs(n) {
+    var i = 1;
+    var x = document.getElementsByClassName("carousel");
+    const boxMenu = document.querySelector("#order_box");
+    if (n > x.length) {slideIndex = 1}
+
+    if (n < 1) {slideIndex = x.length} ;
+        for(i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+            boxMenu.style.display = "none"
+        }
+        x[slideIndex-1].style.display = "block";
+    }
+
+    const toggleButton = document.getElementsByClassName("toggle-button")[0]
+    const navbarLinks = document.getElementsByClassName("nav-links")[0]
+
+    toggleButton.addEventListener('click',() =>{
+        navbarLinks.classList.toggle('active')
+        console.log("click")
+
+    })
+
+    const text = document.querySelector(".text3");
+    const strText = text.textContent;
+    const spltText = strText.split("");
+    text.textContent = "";
+    
+    for(let i=0; i < spltText.length; i+=1){
+        text.innerHTML += "<span>" +spltText[i] + "</span>"
+        continue;
+    }
+    
+    let char = 0;
+    let timer = setInterval(onTick, 50);
+
+    function onTick(){
+        const span = text.querySelectorAll('span')[char];
+        span.classList.add('fade');
+        char++
+        if(char === spltText.length){
+            complete();
+            return;
+        }
+    }
+    function complete(){
+        clearInterval(timer);
+        timer = null;
+    }
+
+    
+    
+  
+</script>
+</html>

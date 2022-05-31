@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Delivery.css">
+    <title>Deliver</title>
+</head>
+<body>
+<div class="nav-bar">
+    <div class="nav-logo">
+        <a href="">
+            <h1>REST</h1>
+            <h3>toSHOP</h3>
+        </a>
+    </div>
+
+    <div class="nav-links">
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">HOME</a>
+                    <a href="order.html">ORDER</a>
+                     <a href="Delivery.html">DELIVERY</a>
+                    <a href="">ABOUT</a>
+                </li>
+            </ul>
+        </nav>
+    </div>  
+</div>
+
+
+    
+<div class="shop_delivery">
+    <h1>REST toSHOP Delivery</h1>
+</div>
+
+<div class="container_dilivery">
+    <div class="div_boxe1"></div>
+    <div class="div_boxe2"></div>
+</div>
+<div class="div_content">
+    <div class="div_cover">
+        <h1>Delivery</h1>
+        <p>Ordering from Jollibee has never been easier! Call #87000, Click Order Online to go to JollibeeDelivery.com or tap the Jollibee app. Satisfy your cravings and have your Jollibee favorites delivered right to your doorstep! </p>
+        <button class="button" onclick="order()"><a>Order</a></button>
+    </div>
+</div>
+
+<div id="order_box" style="display: none;">
+    <img src="close.png" id="closeImg" onclick="closeTag()">
+    <h1 id="Payment">FORM VALIDATION</h1>
+    <label class="name">Name:</label>
+    <input id="input1" required></input>
+    <label class="name" >Phone number:</label>
+    <input id="input1" required></input>
+    <label class="name">Email address:</label>
+    <input id="input1" required></input>
+    <button id="submit" onclick="submitOrder()">Submit</button>
+
+    <input type="checkbox" id="check">
+    <label class="name1">Pleas check this box if your are done in validation</label><br>
+
+</div>
+</body>
+<script src="Order.js"></script>
+</html>

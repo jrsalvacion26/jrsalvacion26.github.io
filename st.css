@@ -1,0 +1,632 @@
+
+*, *::after, *::before {
+    box-sizing: border-box;
+  }
+
+  :root {
+    --handle-size: 3rem;
+    --img-gap: .25rem;
+  }
+  
+
+
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 200vh;
+    background: linear-gradient(125deg, #abbaab, #ffffff);
+    
+}
+.nav-bar{
+    background: black;
+    width: 100%;
+    height: 90px;
+    justify-content: space-between;
+    text-align: center;
+    display: flex;
+    color: white;
+    position: fixed;
+    top: 0%;
+    z-index: 12;
+}
+
+.nav-bar .nav-logo{
+    text-decoration: none;
+    padding: 12px;
+    margin-top: -25px;
+   transition: 0.4s ease;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.nav-bar .nav-logo{
+    transition: 0.4s ease;
+}
+.nav-bar .nav-logo:hover{
+    cursor: pointer;
+}
+
+
+.nav-bar .nav-logo  h1{
+    color: white;
+    transition: 0.4s ease;
+    font-size: 37px
+}
+.nav-bar .nav-logo  h1:hover{
+    color: red;
+}
+.nav-bar .nav-logo  h3{
+    color: red;
+    transition: 0.4s ease;
+    margin-top: -17px;
+    margin-left: 42px;
+    position: absolute;
+}
+.nav-bar .nav-logo  h3:hover{
+    color: white;
+}
+
+
+.nav-bar .nav-links li {
+    text-decoration: none;
+    list-style: none;
+    margin-top: 1.6rem;
+}
+.nav-bar .nav-links a{
+    text-decoration: none;
+    color: white;
+    left: -6rem;
+    position: relative;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: 0.4s ease-in;
+    
+    padding: 2rem;
+}
+.nav-bar .nav-links a:hover{
+    
+    margin-top: -23px;
+    color: red;
+    
+}
+.nav-bar .nav-links nav ul{
+    display: flex;
+    
+}
+
+ .toggle-button{
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 31px;
+    height: 21px;
+    cursor: pointer;
+
+}
+.toggle-button .bar{
+    background-color: white;
+    height: 3px;
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+}
+
+
+.nav-bar .toggle-button .bar{
+    height: 3px;
+    width: 100%;
+    color: red;
+    border-radius: 10px;
+    
+}
+
+
+.intro-bg img{
+    height: 65rem;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 95%;
+    margin-left: 45px;
+    border-radius: 12px;
+    box-shadow: 2px 2px 2px 12px black;
+    top: 11%;
+    filter: brightness(50%);
+}
+.intro-bg .text{
+    color: white;
+    position: relative;
+    text-align: center;
+    margin-top: 350px;
+    font-family:'Courier New', Courier, monospace;
+}
+.intro-bg .text h1{
+    font-size: 170px;
+    
+}
+span{
+    opacity: 0;
+    transition: all 0.4s ease;
+    transform: translateY(50px);
+    
+      
+}
+span.fade{
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+
+
+
+.intro-bg .text h3{
+    font-size: 41px;
+}
+.intro-bg .text button{
+    padding: 19px 25px 19px 25px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.2s ease-out;
+}
+.intro-bg .text button:hover{
+    background: red;
+    color: white;
+    box-shadow: 2px 7px 2px 2px black;
+}
+.intro-bg .text button a{
+    font-size: 30px;
+    font-weight: bolder;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.card{
+   display: flex;
+   background: gray;
+   height: 40rem;
+   width: 70%;
+   margin-top: 32rem;
+   position: relative;
+   justify-content: center;
+   margin-left: 19rem;
+   border-radius: 12px;
+  
+}
+
+.card .carousel{
+    background: white;
+    height: 34rem;
+    width: 51rem;
+    box-shadow: 2px 2px 2px 2px;
+    display:flex;
+    margin-left: 3rem;
+    margin-top: 3rem;
+    position: absolute;
+    border-radius: 12px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    
+    scroll-behavior: smooth;
+}
+
+.card .carousel img{
+    height: 21rem;
+    width: 24rem;
+    padding: .25rem;
+    position: absolute;
+    align-items: center;
+    margin-left: -11rem;
+    margin-top: 2rem;
+    border-radius: 12px;
+}
+ 
+.card .h1{
+    position: absolute;
+    top: -10rem;
+    margin-left: 4rem;
+    background: linear-gradient(125deg, #649173, #dbd5a4);
+    color: black;
+    padding: 12px 12px 12px 12px;
+    transition: 0.4s ease;
+    font-weight: bolder;
+    border-radius: 12px;
+    font-family:'Courier New', Courier, monospace;
+}
+.card .h1:hover{
+    color: white;
+}
+
+.card  .carousel h1{
+    font-size: 41px;
+    font-weight: bolder;
+    font-family:'Courier New', Courier, monospace;
+    top: 22rem;
+    position: absolute;
+    text-align: center;
+    margin-left: 18rem;
+}
+.card  .carousel button{
+    font-size: 31px;
+    font-weight: bolder;
+    font-family:'Courier New', Courier, monospace;
+    border-radius: 4px;
+    margin-left: 17rem;
+    top: 30rem;
+    
+    position: absolute;
+    cursor: pointer;
+    transition: 0.4s ease;
+    
+}
+
+.card  .carousel button:hover{
+    background: red;
+    color: white;
+    height: 3rem;
+    width: 7rem;
+}
+.card  .carousel h2{
+    font-size: 36px;
+    font-weight: bolder;
+    text-align: left;
+    justify-content: center;
+    font-family:'Courier New', Courier, monospace;
+    float: left;
+    margin-left: 2rem;
+    position: relative;
+    top: 28rem;
+    position: absolute;
+}
+.card .buttonleft{
+    font-size: 115px;
+    border: none;
+    background: gray;
+    border-radius: 12px;
+    margin-left: 93rem;
+    border-radius: 12px;
+    cursor: pointer;
+}
+.card .buttonleft:hover{
+    color: red;
+}
+.card .buttonright{
+    font-size: 125px;
+    background: gray;  
+    background: gray; 
+    border-radius: 12px;
+    cursor: pointer;
+    position: absolute;
+    border: none;
+    margin-left: -94rem;
+    padding-bottom: 1rem;
+   
+}
+.card .buttonright:hover{
+    color: red;
+}
+
+.row{
+    position: absolute;
+    display: flex;
+    grid-template-columns: repeat( 1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-area: span;
+    
+    top: 322%;
+    grid-gap: 30px;
+    justify-content: center;
+    margin: auto 22px;
+    
+}
+.row .place{
+    background: white;
+    box-shadow: 2px 2px 2px 2px black;
+    border-radius: 12px;
+    top:-55rem;
+    position: absolute;
+    height: 30rem;
+    text-align: center;
+    justify-content: center;
+    font-family: 'Courier New', Courier, monospace;
+    width: 30%;
+    margin-left: 100rem;
+    
+    
+}
+.row .AWARD{
+    background: white;
+    box-shadow: 2px 2px 2px 2px black;
+    border-radius: 12px;
+    height: 30rem;
+    width: 50%;
+    margin-left: 17rem;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    justify-content: center;
+    margin-top: -55rem;
+    position: absolute;
+}
+.row .CERTIFICATE{
+    background: white;
+    box-shadow: 2px 2px 2px 2px black;
+    border-radius: 12px;
+    margin-top: -884px;
+    height: 30rem;
+    width: 25%;
+    font-size: 17px;
+    text-align: center;
+    margin-left: -972px;
+    position: absolute;
+    font-family: 'Courier New', Courier, monospace;
+}
+.row .INFO{
+    background: white;
+    box-shadow: 2px 2px 2px 2px black;
+    border-radius: 12px;
+    width: 67%; 
+    height: 30rem; 
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;  
+    margin-left: 20rem;
+    margin-top: -384px;
+    position: relative;
+}
+.end{
+    background: black;
+    width: 100%;
+    height: 350px;
+    position: absolute;
+    top: 220rem;
+}
+.end .col1{
+    background: white;
+    top: 12rem;
+    position: absolute;
+    width: 80%;
+    left: 11rem;
+    height: 1px;
+}
+.end .col{
+    font-size: .5rem;
+    padding-left: 27rem;
+    top: 12rem;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    display: inline-block;
+    flex-direction: column;
+    position: relative;
+
+
+}
+
+
+
+
+@media  (max-width: 700px)
+{
+    .end .col1{
+        top: 7rem;
+        left: 4rem;
+    }
+    
+     .nav-logo a{
+        font-size: 14px;
+        position: absolute;
+
+    }
+    .nav-bar .nav-logo a h1{
+        font-size: 31px;
+        margin-top: 29px;
+        
+    }
+    .nav-bar .nav-logo {
+        position: absolute;
+    }
+    .nav-bar{
+        flex-direction: column;
+        align-items: flex-start;
+        z-index: 200;
+   
+    }
+    
+    .nav-links{
+        display: none;
+        width: 100%;
+        
+    } 
+    
+    .nav-bar .nav-links li{
+        flex-direction: column;
+        
+    }
+    
+    .nav-bar .nav-links nav ul li a{
+            font-size: 1rem;
+            text-align: center;
+            left: 6rem;
+            display: inline-block;
+            color: white;
+            z-index: 100;
+            position: relative;
+            margin-top: -1rem;
+            
+        }
+    .nav-bar .nav-links.active{
+        display: flex;
+        
+    }
+  
+
+    
+    .intro-bg img{
+        height: 420px;
+        width: 94%;
+        position: absolute;
+        display: flex;
+        margin-left: 21px;
+        top: 12%;
+    }
+    .intro-bg .text{
+        position: relative;
+        margin-top: 142px;
+        text-shadow: 3px 2px 1px black;
+    }
+    .intro-bg .text h1{
+        font-size: 39px;
+    }
+    .intro-bg .text h3{
+        font-size: 21px;
+    }
+    .intro-bg .text button{
+        padding: 12px 12px 11px 11px;
+        border: none;
+        margin-top: 22px;
+    }
+    .intro-bg .text button a{
+        font-size: 21px;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    .card{
+        width: 85%;
+        height: 430px;
+        margin-left: 50px;
+        position: absolute;
+        top: 39%;
+        display: flex;
+    }
+    .card .carousel{
+        height: 250px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        justify-items: center;
+        top: 3rem;
+        position: absolute;
+        margin-left: 1rem;
+        display: flex;
+        width: 71%;
+    }
+    .card button{
+        justify-content: space-between;
+        font-size: 12rem;
+        margin-left: -12rem;
+        
+    }
+    .card .carousel img{
+        height: 150px;
+        width: 135px;
+        position: absolute;
+        justify-content: center;
+        text-align: center;
+        margin-left: -72px;
+        margin-top: 1rem;
+    }
+   
+    .card .carousel button {
+        top: 22rem;
+        font-size: 1.5rem;
+        margin-left: 7rem;
+        z-index: 100;
+        position: absolute;
+    }
+    .card  .carousel h1{
+        top: 56%;
+        font-size: 31px;
+        position: absolute;
+        margin-left: 130px;
+    }
+    .card .h1{
+        top: -6rem;
+        margin-left: 40px;
+    }
+    .card .buttonleft{
+        font-size: 41px;
+        
+        position: absolute;
+        text-align:right;
+        margin-left: 512px;
+        margin-top: 102px;
+        outline: none;
+        border: none;
+        background: gray;
+        cursor: pointer;
+        transition: 0.4s ease-out;
+    }
+
+    .card .buttonleft:hover{
+        color: red;
+    }
+    .card .buttonright{
+        font-size: 41px;
+        margin-top: 102px;
+        outline: none;
+        border: none;
+        background: gray;
+        cursor: pointer;
+        transition: 0.4s ease-out;
+        margin-left: -30rem;
+    }
+    .card .buttonright:hover{
+        color: red;
+    }
+    .card  .carousel button{
+        top: 81%;
+        transition: 0.4s ease-out;
+        display: absolute;
+    }
+    .card  .carousel button:hover{
+        background: red;
+        color: white;
+    }
+    .card  .carousel h2{
+        top: 11.4rem;
+        margin-left: 1rem;
+        font-size: 26px;
+    }
+
+   
+    .row .place{
+       width: 50%; 
+       font-size: 12px;
+       margin-left: -252px;
+       top: -102rem;
+       position: absolute;
+        
+    }
+    .row .AWARD{
+        top: -47rem;
+        margin-left: 22rem;
+        font-size: 73%;
+        width: 40%;
+        position: absolute;
+        
+    }
+    .row .CERTIFICATE{
+        position: absolute;
+        top: -14.5rem;
+        margin-left: 340px;
+        font-size: 14px;
+        width: 40%;
+    }
+    .row .INFO{
+        margin-left: -15rem;
+        width: 45%;
+        font-size: 67%;
+        position: relative;
+        margin-top: -70rem;
+        
+    }
+    .end{
+        top: 305%;
+        height: 200px;
+        bottom: 0%;
+    }
+    
+}
+
+
+

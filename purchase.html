@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style type="text/css">
+       
+       body{
+           background: rebeccapurple;
+       }
+       #display{
+           color: black;
+           font-weight: bolder;
+           font-size: 3rem;
+           left: 3rem;
+           position: absolute;
+           font-family: 'Courier New', Courier, monospace;
+           transition: 0.4s ease-out;
+       }
+       #btn{
+           font-family: 'Courier New', Courier, monospace;
+           height: 2rem;
+           width: 7rem;
+           transition: 0.4s ease-out;
+           top: 12rem;
+           position: absolute;
+           border-radius: 4px;
+
+       }
+       #btn:hover{
+           background: red;
+           color: white;
+       }
+       #btn1{
+           font-family: 'Courier New', Courier, monospace;
+           height: 2rem;
+           left: 14rem;
+           top: 12rem;
+           position: absolute;
+           transition: 0.4s ease-out;
+           border-radius: 4px;
+       }
+       #btn1:hover{
+           background: red;
+           color: white;
+       }
+       #box{
+           position: absolute;
+           top: 22rem;
+           left: 1.4rem;
+           border-radius: 12px;
+       }
+       .intro{
+        font-family: 'Courier New', Courier, monospace;
+        font-size: large;
+        position: absolute;
+        left: 3rem;
+        top: 18rem;
+        color: red;
+        display: inline-block;
+        
+
+    }
+    .intro h1{
+        display: inline-block;
+        position: absolute;
+        top: 12rem;
+    }
+    span{
+        opacity: 0;
+        transition: all 0.4s ease;
+        transform: translateX(50px);
+        display: inline-block;
+          
+    }
+    span.fade{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+
+    .purchase{
+        top: 52rem;
+        position: relative;
+        background: gray;
+        width: 12rem;
+        height: 12rem;
+        grid-template-columns: repeat(2, 1fr);
+        left: 24rem;
+        border-radius: 12px;
+        
+        
+    }
+   
+    .purchase #btn_order{
+       position: absolute;
+        top: 10rem;
+        left: 8rem;
+        border-radius: 5px;
+        
+    }
+    .purchase #order{
+        background: teal;
+        border-radius: 12px;
+        display: none ;
+        top:.4rem;
+        position: absolute;
+        width: 22rem;
+        height: 21rem;
+        border-radius: 4px;
+        transition: 0.4s ease;
+        z-index: 12;
+    }
+    .purchase #order::after{
+        transform: translateY(12px);
+    }
+    .box{
+        display: flex;
+        grid-template-columns: repeat(2, 1fr);
+        position: relative;
+    }
+
+    .purchase #order input{
+        position: absolute;
+        text-align: right;
+        display: flex;
+    }
+    *, *::after, *::before {
+    box-sizing: border-box;
+  }
+
+  :root {
+    --handle-size: 3rem;
+    --img-gap: .25rem;
+  }
+  
+
+
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 200vh;
+    background: linear-gradient(125deg, #abbaab, #ffffff);
+    
+}
+.nav-bar{
+    background: black;
+    width: 100%;
+    height: 90px;
+    justify-content: space-between;
+    text-align: center;
+    display: flex;
+    color: white;
+    position: fixed;
+    top: 0%;
+    z-index: 12;
+}
+
+.nav-bar .nav-logo{
+    text-decoration: none;
+    padding: 12px;
+    margin-top: -25px;
+   transition: 0.3s ease-out;
+}
+
+.nav-bar .nav-logo a{
+    text-decoration: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+}
+
+.nav-bar .nav-logo a h1{
+    color: white;
+    transition: 0.3s ease-out;
+    font-size: 37px;
+    opacity: 0;
+    transition: all 0.4s ease;
+    transform: translateX(50px);
+    display: inline-block;
+    font-family: 'Courier New', Courier, monospace;
+}
+.nav-bar .nav-logo a h1.fade{
+
+}
+.nav-bar .nav-logo a h1:hover{
+    color: red;
+}
+.nav-bar .nav-logo a h3{
+    color: red;
+    transition: 0.3s ease-out;
+    margin-top: -17px;
+    margin-left: 42px;
+    position: absolute;
+}
+.nav-bar .nav-logo a h3:hover{
+    color: white;
+}
+.nav-bar .nav-links {
+    
+}
+
+.nav-bar .nav-links li {
+    text-decoration: none;
+    list-style: none;
+    margin-top: 1.6rem;
+}
+.nav-bar .nav-links a{
+    text-decoration: none;
+    color: white;
+    padding: 2rem;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: 0.2s ease-out;
+}
+.nav-bar .nav-links a:hover{
+    background: gray;
+    margin-top: -23px;
+    color: red;
+    border-radius: 3px;
+    padding: 19px 19px 12px 12px;
+}
+.nav-bar .nav-links nav ul{
+    display: flex;
+    
+}
+.toggle-button{
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 31px;
+    height: 21px;
+    cursor: pointer;
+}
+.toggle-button .bar{
+    background-color: white;
+    height: 3px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.intro-bg img{
+    height: 65rem;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 95%;
+    margin-left: 45px;
+    border-radius: 12px;
+    box-shadow: 2px 2px 2px 12px black;
+    top: 11%;
+    filter: brightness(50%);
+}
+.intro-bg .text{
+    color: white;
+    position: relative;
+    text-align: center;
+    margin-top: 350px;
+    font-family:'Courier New', Courier, monospace;
+}
+.intro-bg .text h1{
+    font-size: 170px;
+    
+}
+
+h1{
+    height: 12rem;
+    width: 21rem;
+    z-index: 12;
+    border-radius: 12px;
+    position: absolute;
+    background: white;
+}
+   
+    </style>
+</head>
+<body>
+    
+    <button id="btn">Click this button </button>
+    <button id="btn1">Close it </button>
+    <h1 id="display"></h1>
+    <div id="box"></div>
+    <div class="intro">
+        <h1>Hello im Rene Salvacion</h1>
+        <h1>bitch</h1>
+    </div>
+
+    <div class="box_order">
+
+    </div>
+    
+    <div class="box">
+        <div class="purchase">
+        
+            <div id="order">
+                <input>number</input>
+            </div>
+            <button id="btn_order" >order</button>
+        </div>
+
+    
+        <div class="purchase">
+            <div id="order">
+                <input>number</input>
+                <input>contact</input>
+                <input>number</input>
+            </div>
+            <button id="btn_order" >order</button>
+        </div>
+    </div>
+    
+    <header>
+        <div class="nav-bar">
+            <div class="nav-logo">
+                <a href="">
+                    <h1>REST</h1>
+                    <h3>toSHOP</h3>
+                </a>
+            </div>
+            <a class="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <div class="nav-links">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="index.html">HOME</a>
+                            <a href="order.html">ORDER</a>
+                            <a href="">SERVICE</a>
+                            <a href="">ABOUT</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>    
+        </div>
+    </header>
+</body>
+<script>
+    {
+    const btn = document.querySelector("#btn_order");
+    const orderBox = document.querySelector(".box_order");
+
+    btn,addEventListener("click", () =>{
+        btn.innerHTML = "<h1> asdhfhf</h1>";
+        
+        
+    })
+    
+    /*const btn = document.querySelector("#btn_order");
+    const order = document.querySelector("#order");
+    
+    btn.addEventListener("click", () =>{
+        console.log(order.style.display,"click")
+        if(order.style.display == "none"){
+            //btn.style.display = "none";
+            order.style.display = "block";
+            
+        }
+        else{
+            order.style.display = "none";
+            
+        }
+    })*/
+
+    
+    
+
+
+
+    document.querySelector("#btn").onclick = function(){
+        const text = document.querySelector("#display");
+        text.innerText = "Close it"
+    }
+    document.querySelector("#btn1").onclick = function(){
+        const text = document.querySelector("#display");
+        text.innerText = ""
+    }
+    const box = document.querySelector("#box")
+    box.style.backgroundColor = "grey"
+    box.style.width = "20rem"
+    box.style.height = "22rem"
+
+   
+    box.addEventListener("click", e =>{
+        console.log("click")
+        box.style.backgroundColor = "whitesmoke"
+    })
+
+    box.addEventListener("mousedown", e =>{
+        console.log("click");
+        box.style.backgroundColor = "red";
+    })
+    box.addEventListener("mouseup", e =>{
+        console.log("let");
+        box.style.backgroundColor = "grey";
+    })
+
+    box.addEventListener("dblclick", e =>{
+        console.log("double click");
+        box.style.backgroundColor = "red";
+    })
+    
+    box.addEventListener("mousemove", e =>{
+        console.log("cursor collide");
+    
+    })
+
+    const text = document.querySelector(".nav-logo");
+    const strText = text.textContent;
+    const spltText = strText.split("");
+    
+
+    for(let i=0; i < spltText.length; i+=1){
+        text.innerHTML += "<span>" + spltText[i] + "</span>"
+        continue;
+    }
+    
+    let char = 0;
+    let timer = setInterval(onTick, 50);
+
+    function onTick(){
+        const span = text.querySelectorAll('span')[char];
+        span.classList.add('fade');
+        char++
+        if(char === spltText.length){
+            complete();
+            return;
+        }
+    }
+    function complete(){
+        clearInterval(timer);
+        timer = null;
+    }
+}
+   
+
+</script>
+</html>

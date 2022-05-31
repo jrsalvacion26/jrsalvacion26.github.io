@@ -1,0 +1,318 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+  }
+
+  :root {
+    --handle-size: 3rem;
+    --img-gap: .25rem;
+  }
+  
+
+
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 250vh;
+    background-color: #eec0c6;
+    background-image: linear-gradient(315deg, #eec0c6 0%, #7ee8fa 74%);
+    width: 100%;
+    overflow-x: hidden;
+}
+.nav-bar{
+    background: black;
+    width: 100%;
+    height: 90px;
+    justify-content: space-between;
+    text-align: center;
+    display: flex;
+    color: white;
+    position: fixed;
+    top: 0%;
+    z-index: 42;
+    
+}
+
+.nav-bar .nav-logo{
+    text-decoration: none;
+    padding: 12px;
+    margin-top: -25px;
+   transition: 0.3s ease-out;
+}
+
+.nav-bar .nav-logo a{
+    text-decoration: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+}
+
+.nav-bar .nav-logo a h1{
+    color: white;
+    transition: 0.3s ease-out;
+    font-size: 37px
+}
+.nav-bar .nav-logo a h1:hover{
+    color: red;
+}
+.nav-bar .nav-logo a h3{
+    color: red;
+    transition: 0.3s ease-out;
+    margin-top: -17px;
+    margin-left: 42px;
+    position: absolute;
+}
+.nav-bar .nav-logo a h3:hover{
+    color: white;
+}
+
+
+.nav-bar .nav-links li {
+    text-decoration: none;
+    list-style: none;
+    margin-top: 1.6rem;
+    
+}
+.nav-bar .nav-links a{
+    text-decoration: none;
+    color: white;
+    padding: 2rem;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma,Verdana, sans-serif;
+    transition: 0.4s ease-in;
+}
+.nav-bar .nav-links a:hover{
+    
+    margin-top: -23px;
+    color: red;
+    
+}
+.nav-bar .nav-links nav ul{
+    display: flex;
+    
+}
+.shop_delivery{
+    display: flex;
+    background-color: #ffac81;
+    background-image: linear-gradient(150deg, #ffac81 0%, #ff928b 74%);
+    width: 100%;
+    height: 12rem;
+    top: 5.3rem;
+    border-top: 16px solid rgba(255, 182, 193, 0.327);
+    border-bottom: 10px solid black;
+    position: relative;
+}
+.shop_delivery h1{
+    line-height: 5rem;
+    display: flex; 
+    color: white; 
+    text-align: center;
+    justify-content: center;
+    left: 34rem;
+    text-shadow: 2px  5px black;
+    position: absolute;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 5rem;
+    
+}
+.container_dilivery{
+    display: flex;
+    top: 28rem;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    left: 12rem;
+    
+}
+.container_dilivery .div_boxe1{
+    background-color: #fad0c4;
+    background-image: linear-gradient(315deg, #fad0c4 0%, #f1a7f1 74%);
+    box-shadow: 2px 2px 8px 2px black;
+    width: 35rem;
+    height: 18rem;
+    border: 1px solid black;
+    border-radius: 32px;
+    left: 2rem;
+    position: absolute;
+}
+.container_dilivery .div_boxe2{
+    background-color: #5de6de;
+    background-image: linear-gradient(315deg, #5de6de 0%, #b58ecc 74%);
+    box-shadow: 2px 2px 7px  black;
+    width: 33rem;
+    height: 17rem;
+    top: -5rem;
+    left: 9rem;
+    border: 1px solid black;
+    position: absolute;
+    justify-content: center;
+    
+}
+.div_content{
+    align-items: center;
+    display: block;
+    text-align: center;
+    justify-content: center;
+    top: 12rem;
+    position: relative;
+    left: 62rem;
+}
+.div_content .div_cover{
+    background: white;
+    box-shadow: 2px 2px 2px 2px black;
+    border-radius: 5px;
+    border: 2px solid black;
+    height: 33rem;
+    width: 32rem;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    
+}
+.div_content .div_cover h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 4rem;
+}
+.div_content .div_cover p{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    font-weight: bolder;
+    line-height: 2rem;
+    
+}
+.div_content .div_cover button{
+    padding: 1rem 4rem 1rem 4rem;
+    top: 25rem;
+    left: 11rem;
+    border-radius: 12px;
+    position: absolute;
+    transition: 0.4s ease;
+}
+.div_content .div_cover button:hover{
+    background: red;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0rem 0rem 1rem 0rem rebeccapurple;
+}
+.div_content .div_cover button a{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 22px;
+    font-weight: bolder;
+}
+#order_box{
+    position: absolute;
+    height: 32rem;
+    width: 32rem;
+    background:  linear-gradient(140deg, #43C6AC, #F8FFAE);
+    left: 48rem;
+    top: 25rem;
+    border-radius: 12px;
+    border: 2px solid black;
+    box-shadow: 2px 2px 2px 2px black;
+    animation-name: order;
+    animation-duration: 0.4s;  
+}
+
+
+@keyframes order{
+    from{top: -4rem;}
+    to {top: 25rem;}
+    
+}
+#order_box img{
+    position: absolute;
+    left: 29rem;
+    cursor: pointer;
+    transition: 0.5s ease;
+   }
+   #order_box img:hover{
+       background: red;
+       border-radius: 50%;
+   }
+   #order_box  .name{
+       position: relative;
+       display: block;
+       font-weight: bolder;
+       justify-content: right;
+       align-items: center;
+       font-family: 'Courier New', Courier, monospace;
+       top: 5rem;
+       left: 19px;
+       
+   }
+   
+   #order_box #input1{
+       top: 1.7rem;
+       position: relative;
+       display: block;
+       align-items: center;
+       justify-content: center;
+       margin-top: 22px;
+       height: 2rem;
+       left: 10rem;
+       border-radius: 12px;
+       border: 2px solid black;
+       cursor: pointer;
+       width: 20rem;
+       font-family: 'Courier New', Courier, monospace;
+       font-weight: bolder;
+      
+   }
+   #order_box #input1:hover{
+       box-shadow: 2px 2px 2px 2px black;
+   }
+   #order_box #check {
+       position: absolute;
+       padding-left: none;
+       top: 27rem;
+       height: 1.5rem;
+       width: 1.5rem;
+       left: 3rem;
+       border: 2px solid black;
+       cursor: pointer;
+   }
+   #order_box #check:hover{
+       box-shadow: 2px 2px 2px 2px black;
+       
+   }
+   #order_box .name1{
+       font-family: 'Courier New', Courier, monospace;
+       font-weight: bolder;
+       top: 27.5rem;
+       position: absolute;
+       font-size: 13px;
+       left: 5rem;
+   }
+   #order_box #input1 .name1{
+       position: relative;
+       top: 18rem;
+   }
+   #Payment{
+       font-family: 'Courier New', Courier, monospace;
+       position: relative;
+       left: 8rem;
+       top: 2rem;
+   }
+   #Payment:hover{
+       color: white;
+   }
+   #submit{
+       position: absolute;
+       font-family: 'Courier New', Courier, monospace;
+       height: 2rem;
+       width: 6rem;
+       font-weight: bolder;
+       font-size: 1rem;
+       top: 22rem;
+       left: 14rem;
+       cursor: pointer;
+       border-radius: 5px;
+       transition: 0.4s ease;
+       
+   }
+   
+   #submit:hover{
+       background: red;
+       color: white;
+       box-shadow: 2px 5px 2px 2px black;
+   }
